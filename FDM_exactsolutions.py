@@ -1,5 +1,4 @@
 import numpy as np
-from tabulate import tabulate
 import matplotlib.pyplot as plt
 
 ## exact solutions
@@ -10,6 +9,7 @@ import matplotlib.pyplot as plt
 L = 1
 A = 1
 alphas = [0.2,0.4,0.75,3,5,7]
+
 u_exact1 = lambda x,alpha: 100/np.sinh(alpha * L) * np.sinh(alpha * x)
 u_exact2 = lambda x,alpha: 100/np.cosh(alpha * L) * np.cosh(alpha * x)
 du_exact1 = lambda x,alpha: (100*alpha*np.cosh(alpha*x))/np.sinh(L*alpha)
@@ -33,27 +33,27 @@ plt.title("Exact Analytical Solution: Temperature, Case 1")
 plt.xlabel("x")
 plt.ylabel("Temperature (C)")
 plt.legend()
-plt.savefig("hw1_exactTemp_case1.png")
+plt.savefig("exactTemp_case1.png")
 
 plt.figure(2)
 plt.title("Exact Analytical Solution: Temperature, Case 2")
 plt.xlabel("x")
 plt.ylabel("Temperature (C)")
 plt.legend()
-plt.savefig("hw1_exactTemp_case2.png")
+plt.savefig("exactTemp_case2.png")
 
 plt.figure(3)
 plt.title('Exact Analytical Solution: Heat Flux, Case 1')
 plt.xlabel('x')
 plt.ylabel('Heat Flux (Q)')
 plt.legend()
-plt.savefig('hw1_exactQ_case1.png')
+plt.savefig('exactQ_case1.png')
 
 plt.figure(4)
 plt.title('Exact Analytical Solution: Heat Flux, Case 2')
 plt.xlabel('x')
 plt.ylabel('Heat Flux (Q)')
 plt.legend()
-plt.savefig('hw1_exactQ_case2.png')
+plt.savefig('exactQ_case2.png')
 
 #################################################################

@@ -10,7 +10,6 @@ def richardsons(Q_dx):  # where Q_dx = Qdx, Qdx/2, Qdx/4, ...
     return Qextr
 
 def convergence(Q_dx, Qextr, dx):
-    print(Q_dx, dx)
     beta = np.log((Qextr-Q_dx[0])/(Qextr-Q_dx[1]))/np.log(2)
     return beta 
 
